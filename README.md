@@ -2,7 +2,7 @@
 #FTPaddict V10 
 
 #Caution!!!
-Don’t delete the FTPaddict_cache folder that will be created automatically to save your default settings, shortcuts and playlist file.
+Don’t delete the FTPaddict_cache folder that will be created automatically to save your browsing history, default settings, shortcuts and playlist file.
 
 FTPaddict is a powerful tool designed for easy streaming and downloading videos from FTP servers. Open FTPaddict by double-clicking the executable. You'll see a list of pre-configured FTP shortcuts on the homepage.
 
@@ -11,6 +11,7 @@ FTPaddict is a powerful tool designed for easy streaming and downloading videos 
 Access FTP Servers: Click on an FTP shortcut to access a pre-configured server, or enter a custom FTP URL in the search bar and click Go.
 Browse: Navigate through folders and files as you would in a standard file manager. Click on a folder to view its video contents.
 Search: Use the search bar to find specific folders. By navigating, reach a video list folder in order to start streaming or downloading.
+History: Your folder navigation will be recorded in the history. Maximum of 100 history entries will be allowed. Click on Browsing History button on homepage to see history. Click on clear button on the history page to delete all the history.
 
 #Streaming and Downloading
 
@@ -19,15 +20,15 @@ Search: Use the search bar to find specific folders. By navigating, reach a vide
 
 =Downloading Tab=
 *Click on any video to download only that specific video.
-*Specify a range of videos <from and to > and click on “Download Now” to start downloading those videos.
+*Specify a range of videos (from and to) and click on “Download” to start downloading those videos.
 *New feature! Click “Download All” to start downloading all the videos of that folder at once.
 *Download location: Videos that you download can be found at the newly created Downloaded Videos folder: file:///your:/path/to/FTPaddict.exe/Downloaded%20Videos/ 
 
 #Customizing FTPaddict
 
 *Edit Shortcuts: Click “Edit Shortcuts” on the homepage to customize the list of FTP servers.
-*You can modify, add, or delete shortcuts (up to five). After making changes, click “Save Shortcuts” to apply them. Tips: Use the “Open URL in Browser” button in your desired folder, copy the link from your web browser address bar and paste in shortcuts.
-*Reset Shortcuts: If needed, reset the shortcuts to the default values by clicking “Reset to Default”
+*You can modify, add, or delete shortcuts (up to five). After making changes, click “Save Shortcuts” to apply them. Tips: Use the “Copy URL” button in your desired folder, and paste in shortcuts.
+*Reset Shortcuts: If needed, reset the shortcuts to the defaults by clicking “Reset to Default”
 
 #Contact Me
 
