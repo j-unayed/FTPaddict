@@ -1,7 +1,7 @@
 # FTPaddict V10
 
 **Caution!**  
-Don’t delete the `FTPaddict_cache` folder that will be created automatically. This folder is used to save your browsing history, default settings, shortcuts, and playlist files.
+Don’t delete the `FTPaddict_cache` folder that will be created automatically. This folder is used to save your browsing history, default settings, shortcuts and playlist files.
 
 **FTPaddict** is a powerful tool designed for easy streaming and downloading of videos from FTP servers.
 
