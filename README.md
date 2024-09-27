@@ -35,7 +35,7 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 
 - **Edit Shortcuts**: Click on `Edit Shortcuts` on the homepage to customize the list of FTP servers.
   - You can modify, add, or delete shortcuts (up to five). After making changes, click on `Save Shortcuts` to apply them.
-  - *Tips*: Use the `Copy URL` button in your desired folder and paste it in shortcuts.
+  *Tips*: Use the `Copy URL` button in your desired folder and paste it in shortcuts.
 - **Reset Shortcuts**: If needed, reset the shortcuts to the defaults by clicking on `Reset Shortcuts`.
 
 ## Contact Me
