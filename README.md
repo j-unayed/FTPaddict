@@ -1,5 +1,3 @@
----
-
 # FTPaddict V10
 
 **Caution!**  
@@ -47,5 +45,3 @@ If you have any suggestions for improvements, feel free to reach out:
 - **Email**: [mdjunayed733@gmail.com](mailto:mdjunayed733@gmail.com)
 - **Facebook**: [http://m.me/junayed733/](http://m.me/junayed733/)
 - **Support Me**: 01728078733 (bKash/Rocket)
-
----
