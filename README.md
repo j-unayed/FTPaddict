@@ -40,7 +40,7 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 
 ## Contact Me
 
-If you have any suggestions for improvements, feel free to reach out:
+If you have any suggestions for improvements, or if you face any error in the program, feel free to reach out:
 
 - **Email**: [mdjunayed733@gmail.com](mailto:mdjunayed733@gmail.com)
 - **Facebook**: [http://m.me/junayed733/](http://m.me/junayed733/)
