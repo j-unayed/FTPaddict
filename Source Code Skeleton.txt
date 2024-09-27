@@ -351,3 +351,27 @@ def reset_to_default():
     """Resets the shortcuts to their default values and restarts the app."""
     # Updates the global shortcuts variable to predefined default values.
     # Calls the save function to persist the changes and refreshes the homepage.
+
+if __name__ == "__main__":
+    root = tk.Tk()
+
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+
+    window_width = 800
+    window_height = 600
+    center_x = int(screen_width / 2 - window_width / 2)
+    center_y = int(screen_height / 2 - window_height / 2)
+
+    root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
+    root.withdraw()
+
+    icon_path = os.path.join(os.path.dirname(__file__), 'myicon.ico')
+    root.iconbitmap(icon_path)
+    root.title("FTPaddict")
+
+    load_history_from_file()
+    show_homepage()
+
+    root.deiconify()
+    root.mainloop()
