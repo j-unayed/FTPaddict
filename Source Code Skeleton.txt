@@ -1,0 +1,353 @@
+Skeleton of the FTPaddict.py Script
+
+import sys
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+import os
+import subprocess
+import webbrowser
+import re
+import tkinter.font as tkfont
+import threading
+import pyperclip
+import json
+import urllib.parse
+import time
+
+# Global variables to handle history, root window, download progress window and pagination
+progress_window = None
+history = []
+current_page_type = None
+current_url = None
+root = None
+folders = []
+current_page = 0
+chunk_size = 150  # Number of folders per page
+
+def get_app_directory():
+    # Checks if the application is running as an executable (frozen).
+    # If frozen, gets the directory of the executable; otherwise, gets the script's directory.
+
+def get_download_directory():
+    # Similar to get_app_directory, it checks if the application is running as an executable.
+    # If frozen, it sets the base directory to the executable's location; otherwise, to the script's location.
+    # Creates a "Downloaded Videos" folder in that base directory if it doesn't exist.
+
+def create_cache_folder():
+    # Uses get_app_directory to find the application directory.
+    # Creates a "FTPaddict_cache" folder in the app directory if it doesn't exist.
+
+def get_file_paths():
+    # Calls create_cache_folder to get the cache directory.
+    # Defines paths for settings and playlist files within the cache directory and returns them.
+
+def save_player_selection(selection):
+    # Opens the SETTINGS_FILE in write mode and saves the user-selected media player option.
+
+def load_player_selection():
+    # Checks if SETTINGS_FILE exists; if so, reads and returns the saved player selection.
+    # Defaults to "PotPlayer" if no settings file is found.
+
+def extract_links(base_url):
+    # Sends a GET request to the provided base URL to retrieve the webpage content.
+    # Parses the HTML using BeautifulSoup to extract folder and video links.
+    # Filters links based on specific video formats and returns the lists of folder and video links.
+
+def load_history_from_file():
+    """Load the browsing history from a file."""
+    # Ensures the cache directory exists by calling create_cache_folder.
+    # Checks if the history file exists; if so, loads the history from the file.
+    # Initializes the cache_history to an empty list if the file doesn't exist.
+
+def save_history_to_file():
+    """Save the browsing history to a file."""
+    # Ensures the cache directory exists by calling create_cache_folder.
+    # Writes the current cache_history to the history file in JSON format.
+
+def update_history(url):
+    """Update the browsing history with the provided URL."""
+    # Extracts a meaningful name from the URL using extract_name_from_url.
+    # Removes any existing entry with the same URL from cache_history to maintain order.
+    # Checks if the history exceeds a size limit (100) and removes the oldest entry if necessary.
+    # Appends the new or recently visited entry to cache_history and saves the updated history to a file.
+
+def extract_name_from_url(url):
+    """Extract a meaningful name from the given URL."""
+    # Parses the URL and retrieves its path.
+    # Splits the path into parts and extracts the last part as the name.
+    # Decodes any percent-encoded characters in the name and returns it.
+
+def validate_and_open_url(url):
+    """Validate the URL and navigate to the appropriate page."""
+    # Ensures the URL starts with 'http://', adjusting if necessary.
+    # Sends a GET request to the URL to validate it and check the status code.
+    # Updates the browsing history with the URL if the request is successful.
+    # Calls extract_links to retrieve folder and video links from the URL.
+    # Determines if the URL is for a video or folder and updates the history accordingly.
+    # Displays the video list or folder list based on the type of links extracted.
+    # Shows an error message if the response is not successful or if there are no videos.
+
+def show_folder_list():
+    """Displays a paginated list of folders with a search bar."""
+    # This function clears the current window and sets up the folder list interface,
+    # including a heading label, search bar, and navigation buttons.
+    # It includes methods for searching folders, handling focus events, and displaying
+    # context menus for the search entry.
+
+    # search_folders(): Filters folders based on the search term.
+    # on_entry_click(event): Clears placeholder text on entry focus.
+    # on_focusout(event): Restores placeholder text if the entry is empty.
+    # show_context_menu(event): Displays a context menu for text entry operations.
+
+    # Add search entry and button, bind events for interaction, and display the folder list.
+    # Create navigation buttons for homepage and back navigation.
+
+def show_search_results(search_term, filtered_folders):
+    """Displays the search results on the same page without pagination."""
+    # This function displays the results of a folder search,
+    # showing a heading for the search term and the filtered folder list.
+    # It uses a canvas with a scrollbar for displaying search results and binds
+    # mouse wheel events for scrolling.
+
+    # It also handles showing an error if no folders are found,
+    # and adds a back button for returning to the full folder list.
+
+def display_folder_list():
+    """Displays folders with pagination, scrollbar, media player selection, and a 'Open URL in browser' button."""
+    # This function handles the display of folders in a paginated format,
+    # creating a scrollable canvas to show folders.
+    # It includes methods to open URLs in a browser, validate URL selection,
+    # and provides pagination controls.
+
+    # open_url_in_browser(): Copies the last URL from history to the clipboard.
+    # The function sets up the pagination controls, including previous and next buttons,
+    # and dropdown for page navigation.
+
+def go_to_page(page_num):
+    """Navigate to a specific page of the folder list."""
+    # Updates the current page number and modifies the history
+    # to store the page state for navigation.
+
+def go_to_previous_page():
+    """Navigate to the previous page of the folder list."""
+    # Decreases the current page number if not at the first page
+    # and updates the history with the new page state.
+
+def go_to_next_page():
+    """Navigate to the next page of the folder list."""
+    # Increases the current page number if not at the last page
+    # and updates the history with the new page state.
+
+def show_video_list(video_links):
+    """Displays a list of videos with a header."""
+    # Clears the window, adds a header label, and displays the video list.
+    # It also creates navigation buttons and footer labels for user interaction.
+
+def get_last_url_from_history():
+    """Retrieve the last URL from the history."""
+    # Accesses the last entry in the history and returns the URL if available.
+
+def find_open_url():
+    """Copies the last URL from history to the clipboard."""
+    # Retrieves the last URL and copies it to the clipboard, showing an error if none exists.
+
+def show_temp_message():
+    """Shows a temporary message window without a title bar."""
+    # Creates a transient message window to confirm the URL copy action,
+    # centers it, and automatically closes it after a set time.
+
+def is_connected():
+    """Check if the internet is available by pinging a lightweight server."""
+    # Attempts to make a request to a known IP address to check for internet connectivity,
+    # returning True if successful or False if there is an error.
+
+def display_video_list(video_links):
+    """Displays videos with tabs for streaming and downloading."""
+
+    # Dictionary to hold canvases for scrollable frames
+    canvases = {}
+
+    def create_stream_tab():
+        """Create the Stream tab with existing functionality."""
+        # Create a new tab in the notebook for streaming videos
+
+        # Frame for organizing video buttons
+        # Canvas to enable scrolling through video list
+        # Scrollbar linked to canvas for vertical scrolling
+        # Configures scrolling behavior based on content size
+        # Load user's previous player selection
+
+        # Radio buttons for selecting video player with command to save choice
+
+        # Instruction labels to guide user for player selection
+
+        # Button creation for each video link that triggers the playback
+
+        # Pack canvas and scrollbar for display
+
+    def create_download_tab():
+        """Create the Download tab with input boxes for range and download button."""
+
+        # Create a new tab in the notebook for downloading videos
+
+        # Frame for organizing video download inputs and buttons
+        # Canvas to enable scrolling through video list for download
+
+        # Functions to create progress window and labels for downloads
+        # Function to handle the video download process with retries
+
+        # Function to handle downloading multiple videos in sequence
+
+        # Function to validate input ranges and initiate download process
+        # Function to handle download of all videos at once
+        # Function to handle single video downloads
+
+        # Pack input fields and download buttons for user interaction
+
+def add_to_playlist_and_open(index, video_links, selected_player):
+    # Creates a playlist from video links starting at the specified index.
+    # Writes the playlist to a file in M3U format.
+    # Opens the playlist with the selected media player in a specified order of priority.
+
+
+def find_vlc_path():
+    # Searches for VLC executable in common installation directories for the current user.
+    # Returns the path if found, else returns None.
+
+
+def find_potplayer_path():
+    # Searches for PotPlayer executable in common installation directories for the current user.
+    # Returns the path if found, else returns None.
+
+
+def find_kmplayer_path():
+    # Searches for KMPlayer executable in common installation directories for the current user.
+    # Returns the path if found, else returns None.
+
+
+def open_with_vlc(filename):
+    # Attempts to open the specified file using VLC media player.
+    # Uses subprocess to execute the command for opening the player.
+
+
+def open_with_potplayer(filename):
+    # Attempts to open the specified file using PotPlayer.
+    # Uses subprocess to execute the command for opening the player.
+
+
+def open_with_kmplayer(filename):
+    # Attempts to open the specified file using KMPlayer.
+    # Uses subprocess to execute the command for opening the player.
+
+
+def open_with_default_app(filename):
+    # Opens the specified file with the system's default application.
+    # Handles platform-specific calls for opening the file.
+
+
+def navigate_back():
+    # Navigates back to the previous page using the history stack.
+    # Updates the current page and displays the appropriate content based on the previous state.
+
+
+def clear_window():
+    # Clears all widgets from the main window except for the progress window.
+    # Unbinds mouse scrolling events to prevent errors during clearing.
+
+
+def open_url_from_entry(event=None):
+    # Opens the URL entered in the URL entry widget if it is focused.
+    # Validates the URL before opening.
+
+
+def open_ftpbd_shortcut(index):
+    # Handles clicks on FTPBD shortcut buttons.
+    # Validates and opens the associated URL for the clicked shortcut.
+
+
+def unbind_enter_key():
+    # Unbinds the Enter key from any action in the main window.
+
+
+def bind_enter_key():
+    # Binds the Enter key to the URL entry for opening URLs.
+
+
+def load_shortcuts_from_file():
+    # Loads FTPBD shortcuts from a settings file.
+    # Resets to default shortcuts if the file is not found or is invalid.
+
+def open_donation_window():
+    """Opens a donation window."""
+    # Uses Toplevel to create a new window
+    # Configures window title, size, and resizability
+    # Sets background color
+    # Calculates center position for the new window
+    # Creates a frame inside the window
+    # Adds labels and buttons with specific styles and colors
+    # Binds button command to copy number to clipboard
+
+def copy_to_clipboard():
+    """Copies the donation number to clipboard and shows a temporary message."""
+    # Uses pyperclip to copy text to clipboard
+    # Calls another function to show a temporary message window
+
+def show_temp_message0():
+    """Shows a temporary message window without a title bar."""
+    # Uses Toplevel to create a message window
+    # Removes the title bar with overrideredirect
+    # Configures window size and background color
+    # Centers the window based on the root window's position
+    # Creates a label for the message
+    # Sets the window's opacity
+    # Uses after method to close the window after a delay
+
+def clear_history():
+    """Clear the browsing history."""
+    # Resets a global variable to an empty list
+    # Calls a function to save the updated history to a file
+    # Calls a function to refresh the display of history
+
+def show_history_page():
+    """Display the browsing history."""
+    # Clears existing widgets in the root window
+    # Creates a new frame to display history
+    # Adds a title label
+    # Creates a scrollable frame to hold history content
+    # Uses Canvas and Scrollbar to create scrolling functionality
+    # Checks if the history is empty and displays appropriate message
+    # Displays history entries as buttons with commands to open URLs
+    # Adds Clear and Back buttons with specific commands
+    # Binds mouse wheel events for scrolling
+
+def show_homepage():
+    """Displays the homepage with FTP shortcuts and search entry."""
+    # Loads shortcuts from file
+    # Clears global variables related to navigation state
+    # Creates frames and labels to structure the homepage layout
+    # Adds buttons for FTP shortcuts, editing shortcuts, browsing history, and searching
+    # Configures an Entry widget for URL input with placeholder text
+    # Binds focus events to handle placeholder behavior
+    # Binds right-click to show context menu for Entry widget
+    # Creates footer with credits and donation link
+
+def open_edit_shortcuts_window():
+    """Opens a smaller window to edit FTPBD shortcuts."""
+    # Uses tk.Toplevel to create a new window for editing shortcuts.
+    # Retrieves the root window's position and size to center the new window.
+    # Creates Entry widgets for user input and binds context menu functionality.
+    # Uses a nested function to save changes and update the global shortcuts.
+
+def save_shortcuts_to_file():
+    """Saves the shortcuts to the settings file for persistence."""
+    # Opens a file in write mode and saves shortcut entries in a specific format.
+    # Utilizes a loop to iterate through the global shortcuts dictionary.
+
+def reset_to_default():
+    """Resets the shortcuts to their default values and restarts the app."""
+    # Updates the global shortcuts variable to predefined default values.
+    # Calls the save function to persist the changes and refreshes the homepage.
