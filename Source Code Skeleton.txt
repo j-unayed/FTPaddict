@@ -1,4 +1,4 @@
-Skeleton of the FTPaddict.py Script
+Skeleton of the FTPaddict.py Script. Original script holds approximately 1600 lines.
 
 import sys
 import tkinter as tk
