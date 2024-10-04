@@ -1,10 +1,12 @@
 # FTPaddict V10
 
-**Caution!**  
-Conversion from `.py` to `.exe` was done using `pyinstaller` command (cmd), so this app will be flagged as a malware by Windows Defender! Click `Run Anyway` upon first time launch or add an exception from your security settings!
-Also, don’t delete the `FTPaddict_cache` folder that will be created automatically. This folder is used to save your browsing history, default settings, shortcuts and playlist files.
-
 **FTPaddict** is a powerful tool designed for easy streaming and downloading of videos from FTP servers.
+
+##Caution!
+
+- Conversion from `.py` to `.exe` was done using `pyinstaller` command (cmd), so this app will be flagged as a malware by Windows Defender! Click `Run Anyway` upon first time launch or add an exception from your security settings!
+Youtube: 
+- Also, don’t delete the `FTPaddict_cache` folder that will be created automatically. This folder is used to save your browsing history, default settings, shortcuts and playlist files.
 
 ## Start-up
 
