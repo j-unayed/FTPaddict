@@ -2,11 +2,16 @@
 
 **FTPaddict** is a powerful tool designed for easy streaming and downloading of videos from FTP servers.
 
-## Caution!
+## Download and Setup
 
-- Conversion from `.py` to `.exe` was done using `pyinstaller` command (cmd), so this app will be flagged as a malware by Windows Defender! Click `Run Anyway` upon first time launch or add an exception from your security settings!
-Youtube: [Demo and Installation of FTPaddict.exe](https://youtu.be/1rgnIlw7zK8?si=wUhCR1yb269XV5-M)
-- Also, don’t delete the `FTPaddict_cache` folder that will be created automatically. This folder is used to save your browsing history, default settings, shortcuts and playlist files.
+1. **Download**: [FTPaddict.zip](https://github.com/j-unayed/FTPaddict/blob/main/FTPaddict.zip)
+2. **Extract**: Right-click on `FTPaddict.zip` and select `Extract All...`
+3. **Open**: Go to the extracted folder and double-click `FTPaddict.exe` to launch the application
+
+**Important!** 
+- **Don’t delete** the `_internal` folder or any content from the folder. The program will crash if you do so!
+
+- The first time you run `FTPaddict.exe`, Windows Defender might flag it as malware because it was converted from `.py` to `.exe` using `pyinstaller`. Click `Run Anyway` or add an exception from your security settings.
 
 ## Start-up
 
@@ -36,9 +41,7 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 
 ## Customizing FTPaddict
 
-- **Edit Shortcuts**: Click on `Edit Shortcuts` on the homepage to customize the list of FTP servers.
-  - You can modify, add, or delete shortcuts (up to five). After making changes, click on `Save Shortcuts` to apply them.
-  *Tips*: Use the `Copy URL` button in your desired folder and paste it in shortcuts.
+- **Edit Shortcuts**: Click on `Edit Shortcuts` on the homepage to customize the list of FTP servers. You can modify, add, or delete shortcuts (up to five). After making changes, click on `Save Shortcuts` to apply them. *Tips*: Use the `Copy URL` button in your desired folder and paste it in shortcuts.
 - **Reset Shortcuts**: If needed, reset the shortcuts to the defaults by clicking on `Reset Shortcuts`.
 
 ## Contact Me
@@ -48,3 +51,4 @@ If you have any suggestions for improvements, or if you face any error in the pr
 - **Email**: [mdjunayed733@gmail.com](mailto:mdjunayed733@gmail.com)
 - **Facebook**: [http://m.me/junayed733/](http://m.me/junayed733/)
 - **Support Me**: 01728078733 (bKash/Rocket)
+- **YouTube:** [Demo and Installation of FTPaddict.exe](https://youtu.be/1rgnIlw7zK8?si=wUhCR1yb269XV5-M)
