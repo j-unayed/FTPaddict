@@ -50,9 +50,9 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 
 - Click on any video to download only that specific video.  
 - Specify a range of videos (from and to) and click `Download` to start downloading those videos.  
-- **New feature!** Click on `Download All` to start downloading all videos in that folder at once.  
-- **Download Location**: Downloaded videos are saved in the `Downloaded Videos` folder:  
-  `file:///your:/path/to/FTPaddict.exe/Downloaded%20Videos/`
+- Click on `Download All` to start downloading all videos in that folder at once.  
+- **Download Location**: Downloaded videos are saved in the `Downloads` folder:  
+  `file:///your:/path/to/FTPaddict.exe/Downloads/`
 
 ## Customizing FTPaddict
 
@@ -67,6 +67,7 @@ For suggestions or support:
 - **Email**: [mdjunayed733@gmail.com](mailto:mdjunayed733@gmail.com)  
 - **Facebook**: [http://m.me/junayed733/](http://m.me/junayed733/)  
 - **Support Me**: 01728078733 (bKash/Rocket)
+
 
 
 
