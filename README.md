@@ -33,14 +33,14 @@ See what people are saying about FTPaddict:
 
 Open FTPaddict by double-clicking the executable. You'll see a list of pre-configured FTP shortcuts on the homepage.
 
-![Homepage](images/homepage.png)
+<img src="images/homepage.png" alt="Homepage" width="600">
 
 ## Navigation
 
 - **Access FTP Servers**: Click on any FTP shortcut to access a pre-configured server, or enter a custom FTP URL in the search bar and click `Go`.  
 - **Browse**: Navigate through folders and files as you would in a standard file manager. Click on a folder to view its folder/video contents.  
 
-![Folder List](images/folderlist.png)
+<img src="images/folderlist.png" alt="Folder List" width="600">
 
 - **History**: Your folder navigation will be recorded in the history (max 100 entries). Click on the `Browsing History` button on the homepage to view history. Click `Clear` to delete all history entries.  
 - **Search**: Use the search bar to find specific folders. Navigate to a Video List Folder to start streaming or downloading.
@@ -49,14 +49,14 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 
 ### Stream Tab
 
-![Stream Tab](images/streamtab.png)
+<img src="images/streamtab.png" alt="Stream Tab" width="600">
 
 - Select the media player (VLC, PotPlayer, or KMPlayer) and click on any video to start streaming.  
 - A playlist of all videos in that folder will be created in order, allowing seamless sequential playback.
 
 ### Download Tab
 
-![Download Tab](images/downloadtab.png)
+<img src="images/downloadtab.png" alt="Download Tab" width="600">
 
 - Click on any video to download only that specific video.  
 - Specify a range of videos (from and to) and click `Download` to start downloading those videos.  
@@ -64,7 +64,7 @@ Open FTPaddict by double-clicking the executable. You'll see a list of pre-confi
 - **Download Location**: Downloaded videos are saved in the `Downloads` folder:  
   `file:///your:/path/to/FTPaddict.exe/Downloads/`
 
-![Download Progress](images/downloadprogress.png)
+<img src="images/downloadprogress.png" alt="Download Progress" width="600">
 
 ## Customizing FTPaddict
 
