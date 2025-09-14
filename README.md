@@ -19,7 +19,7 @@ See what people are saying about FTPaddict:  [TrickBD Discussion](https://trickb
 
 ## Download and Setup
 
-1. **Download**: [FTPaddict.zip](https://github.com/j-unayed/FTPaddict/releases/download/ftpaddict/FTPaddict.zip/)  
+1. **Download**: [FTPaddict.zip](https://github.com/j-unayed/FTPaddict/releases/download/ftpaddictV11/FTPaddict.zip)  
 2. **Extract**: Right-click on `FTPaddict.zip` and select `Extract All...`  
 3. **Open**: Go to the extracted folder and double-click `FTPaddict.exe` to launch the application
 
@@ -67,5 +67,6 @@ For suggestions or support:
 - **Email**: [mdjunayed733@gmail.com](mailto:mdjunayed733@gmail.com)  
 - **Facebook**: [http://m.me/junayed733/](http://m.me/junayed733/)  
 - **Support Me**: 01728078733 (bKash/Rocket)
+
 
 
